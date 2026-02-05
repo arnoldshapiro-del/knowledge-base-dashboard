@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ec4899">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="<head>#129504; Kn">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+  <meta name="mobile-web-app-capable" content="yes">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&#129504; Knowledge Base Dashboard v2 - Dr. Shapiro</title>
@@ -5740,7 +5748,16 @@
         function printManual() {
             const content = document.getElementById('manualContentArea').innerHTML;
             const win = window.open('','','width=800,height=600');
-            win.document.write('<html><head><title>Knowledge Base Dashboard Manual</title><style>body{font-family:system-ui;padding:40px;max-width:800px;margin:0 auto}h1,h2,h3{color:#6b21a8}kbd{background:#e9d5ff;padding:2px 8px;border-radius:4px}code{background:#f3e8ff;padding:2px 6px;border-radius:3px}.tip-box{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:12px 0}.warning-box{background:#fee2e2;border-left:4px solid #ef4444;padding:12px;margin:12px 0}</style></head><body>'+content+'</body></html>');
+            win.document.write('<html><head>
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ec4899">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="<head>#129504; Kn">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+  <meta name="mobile-web-app-capable" content="yes"><title>Knowledge Base Dashboard Manual</title><style>body{font-family:system-ui;padding:40px;max-width:800px;margin:0 auto}h1,h2,h3{color:#6b21a8}kbd{background:#e9d5ff;padding:2px 8px;border-radius:4px}code{background:#f3e8ff;padding:2px 6px;border-radius:3px}.tip-box{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:12px 0}.warning-box{background:#fee2e2;border-left:4px solid #ef4444;padding:12px;margin:12px 0}</style></head><body>'+content+'<script>if("serviceWorker"in navigator){window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js").then(r=>console.log("SW:",r.scope)).catch(e=>console.log("SW err:",e));});}</script>
+</body></html>');
             win.document.close();
             win.print();
         }
@@ -8636,5 +8653,6 @@ INSTRUCTIONS:
 
         </div>
     </div>
+<script>if("serviceWorker"in navigator){window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js").then(r=>console.log("SW:",r.scope)).catch(e=>console.log("SW err:",e));});}</script>
 </body>
 </html>
